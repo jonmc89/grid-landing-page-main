@@ -33,6 +33,11 @@
 
 /* || Main Styles */
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--blue-700);
   font-family: 'Inter', Arial, Helvetica, sans-serif;
@@ -130,6 +135,18 @@ header {
     font-weight: 500;
     font-size: 1.0625rem;
   }
+
+  p {
+    font-weight: 400;
+    font-size: 0.875rem;
+  }
+}
+
+/* Footer */
+
+footer {
+  padding: 1.5rem;
+  color: var(--neutral-0);
 
   p {
     font-weight: 400;
