@@ -34,13 +34,16 @@
 /* || Main Styles */
 
 body {
-  background-color: var(--blue-400);
+  background-color: var(--blue-700);
   font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
 
 /* Header */
 
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 1.5rem;
 }
 
@@ -62,4 +65,11 @@ header {
   padding: 0.1rem;
   width: 0.7rem;
   height: 0.7rem;
+}
+
+.menu-btn {
+  cursor: pointer;
+  background-image: url(./assets/images/icon-menu.svg);
+  width: 1.5rem;
+  height: 1.5rem;
 }
