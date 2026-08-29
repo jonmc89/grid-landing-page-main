@@ -1,0 +1,65 @@
+/* || Global Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --neutral-950: #000;
+  --neutral-0: #fff;
+  --blue-700: #2854fe;
+  --blue-600: #325cff;
+  --blue-400: #4784ff;
+  --blue-200: #c1ceff;
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/inter/inter-v20-latin-regular.woff2') format('woff2');
+  font-family: 'Inter';
+  font-display: swap;
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  src: url('./assets/fonts/inter/inter-v20-latin-500.woff2') format('woff2');
+  font-family: 'Inter';
+  font-display: swap;
+}
+
+/* || Main Styles */
+
+body {
+  background-color: var(--blue-400);
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+
+header {
+  padding: 1.5rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  p {
+    color: var(--neutral-0);
+    font-weight: 500;
+    font-size: 0.875rem;
+  }
+}
+
+.logo-dot {
+  border-radius: 50%;
+  background-color: var(--neutral-0);
+  padding: 0.1rem;
+  width: 0.7rem;
+  height: 0.7rem;
+}
