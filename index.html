@@ -11,6 +11,7 @@
     />
     <link rel="stylesheet" href="./styles.css" />
     <title>Frontend Mentor | Grid landing page</title>
+    <script src="script.js" defer></script>
   </head>
   <body>
     <header>
@@ -18,9 +19,18 @@
         <div class="logo-dot"></div>
         <p>Bridge Collective</p>
       </div>
-      <div class="menu-btn"></div>
+      <div id="menuBtn" class="menu-btn"></div>
     </header>
     <main>
+      <div id="menu" class="menu">
+        <a href="#">About</a>
+        <a href="#">Our Work</a>
+        <a href="#">Partners</a>
+        <a href="#">Annual Report</a>
+        <a href="#">Donate</a>
+      </div>
+      <div id="overlay" class="overlay"></div>
+
       <section class="content-grid-container">
         <article class="hero-wrapper">
           <h1>A classroom for every child.</h1>
