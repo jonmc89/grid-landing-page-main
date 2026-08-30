@@ -35,6 +35,7 @@
 
 html,
 body {
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -49,34 +50,35 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px;
+  border-bottom: 0.05rem solid var(--blue-200);
+  padding: 1.5rem;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
 
   p {
     color: var(--neutral-0);
     font-weight: 500;
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
 .logo-dot {
   border-radius: 50%;
   background-color: var(--neutral-0);
-  padding: 1.6px;
-  width: 11.2px;
-  height: 11.2px;
+  padding: 0.1rem;
+  width: 0.7rem;
+  height: 0.7rem;
 }
 
 .menu-btn {
   cursor: pointer;
   background-image: url(./assets/images/icon-menu.svg);
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .menu-btn-close {
@@ -108,11 +110,12 @@ main {
   pointer-events: none;
 
   a {
-    transition: text-decoration 0.2s ease-in-out;
     cursor: pointer;
     color: var(--neutral-0);
     font-size: 2rem;
     text-decoration: none;
+
+    text-underline-offset: 0.5rem;
   }
 
   a:hover {
@@ -153,19 +156,20 @@ main {
 .hero-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  padding: 56px 32px;
-  height: 342px;
+  gap: 1.5rem;
+  border-bottom: 0.05rem solid var(--blue-200);
+  padding: 3.5rem 2rem;
+  height: 21.375rem;
   color: var(--neutral-0);
 
   h1 {
     font-weight: 500;
-    font-size: 44px;
+    font-size: clamp(2.75rem, 5vw, 3.75rem);
   }
 
   p {
     width: 29ch;
-    font-size: 17px;
+    font-size: 1.0625rem;
     font-size: 400;
     line-height: 165%;
   }
@@ -175,7 +179,8 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 24px;
+  border-bottom: 0.05rem solid var(--blue-200);
+  padding: 1.5rem;
   height: 20.25rem;
 }
 
@@ -187,7 +192,7 @@ main {
 
   p {
     color: var(--neutral-0);
-    font-size: 36px;
+    font-size: 2.25rem;
   }
 }
 
@@ -214,5 +219,106 @@ footer {
   p {
     font-weight: 400;
     font-size: 0.875rem;
+  }
+}
+
+/* || Media Queries */
+
+@media screen and (min-width: 51.25rem) {
+  header {
+    padding: 1.5rem 3rem;
+  }
+
+  .menu {
+    right: 0;
+    width: 50%;
+    height: 100%;
+
+    a {
+      width: 100%;
+      text-align: right;
+    }
+  }
+
+  .content-grid-container {
+    grid-template-rows: repeat(4, 1f);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-wrapper {
+    grid-row: 1;
+    grid-column: 1 / 3;
+    justify-content: center;
+    padding: 3rem;
+    height: 33.5rem;
+
+    h1 {
+      width: 13ch;
+    }
+
+    p {
+      width: 45ch;
+    }
+  }
+
+  .feature-wrapper {
+    padding: 2rem;
+    height: 20.5rem;
+  }
+
+  .students {
+    border-right: 0.05rem solid var(--blue-200);
+  }
+
+  .teachers {
+    border-right: 0.05rem solid var(--blue-200);
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 3rem;
+  }
+}
+
+@media screen and (min-width: 90rem) {
+  .menu {
+    width: 25%;
+  }
+
+  .content-grid-container {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .hero-wrapper {
+    grid-row: 1 / 3;
+    grid-column: 1 / 3;
+    border-right: 0.05rem solid var(--blue-200);
+    height: 87vh;
+  }
+
+  .feature-wrapper {
+    height: 43.5vh;
+  }
+
+  .students {
+    grid-row: 1;
+    grid-column: 3;
+  }
+
+  .schools {
+    grid-row: 1;
+    grid-column: 4;
+  }
+
+  .teachers {
+    grid-row: 2;
+    grid-column: 3;
+  }
+
+  .graduation {
+    grid-row: 2;
+    grid-column: 4;
   }
 }
