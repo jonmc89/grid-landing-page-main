@@ -76,7 +76,9 @@ header {
 
 .menu-btn {
   cursor: pointer;
+  border: none;
   background-image: url(./assets/images/icon-menu.svg);
+  background-color: var(--blue-700);
   width: 1.5rem;
   height: 1.5rem;
 }
