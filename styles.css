@@ -123,6 +123,10 @@ main {
   a:hover {
     text-decoration: underline;
   }
+
+  a:active {
+    color: var(--blue-200);
+  }
 }
 
 .overlay {
